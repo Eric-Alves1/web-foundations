@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalização de links</title>
+    <style>
+      a {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      a:visited {
+        color: blue;
+      }
+      
+      a:hover {
+        color: black;
+        text-decoration: underline;
+      }
+      
+      a:active {
+        color: yellow;
+      }
+      
+      .especial {
+        background-color: #ff9dff7e;
+      }
+      
+      .especial::before {
+        content: '> ';
+      }
+      
+      .especial::after {
+        content: ' [important]';
+        color: darkgrey;
+        font-weight: normal;
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+      <li><a href="https://github.com/Tobberma" class="especial">Github</a></li>
+      <li><a href="https://google.com">Google</a></li>
+      <li><a href="https://instagram.com">Instagram</a></li>
+    </ul>
+</body>
+</html>
