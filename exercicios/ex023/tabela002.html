@@ -8,12 +8,23 @@
       table {
         border-collapse: collapse;
         width: 300px;
+        position: relative;
       }
     
       caption {
         font-size: 1.5em;
         font-weight: bold;
         background-color: lightgrey;
+      }
+    
+      tbody > tr:nth-child(2n) {
+        background-color: lightgrey;
+      }
+    
+      thead > tr > th {
+        position: sticky;
+        top: 0;
+        background-color: grey;
       }
     
       td, th {
@@ -31,8 +42,10 @@
   <table>
     <caption>População dos estados do Brasil</caption>
     <thead>
-      <th scope="col">Estado</th>
-      <th scope="col">População</th>
+      <tr>
+        <th scope="col">Estado</th>
+        <th scope="col">População</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
