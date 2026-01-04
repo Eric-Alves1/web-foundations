@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Exemplo de formularios</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+      <p>
+        <label for="iran">Nivel: </label>
+        <input type="range" name="ran" id="iran" min="1" max="10" oninput="iput.innerHTML = Number(iran.value)">
+        <output name="put" id="iput">5</output>
+      </p>
+      <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </p>
+    </form>
+</body>
+</html>
