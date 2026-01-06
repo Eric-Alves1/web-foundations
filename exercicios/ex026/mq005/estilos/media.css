@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+  header > menu > a {
+    display: inline-block;
+    border-top: 0;
+  }
+  
+  menu {
+    display: block;
+  }
+  
+  span#burguer {
+    display: none;
+  }
+  
+  main {
+    width: 500px;
+  }
+}
