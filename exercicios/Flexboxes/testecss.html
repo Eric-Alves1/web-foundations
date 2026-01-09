@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste</title>
+  <style>
+    /*li:nth-child(5) {
+      list-style-type: none;
+    }*/
+    
+    body {
+      background-color: darkgrey;
+    }
+    
+    #container {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      height: 200px;
+      background-color: white;
+      border: 2px solid black;
+    }
+    
+    .cards {
+      border: 1px solid  black;
+      padding: 10px;
+      background-color: lightskyblue;
+      text-align: center;
+      flex-basis: auto;
+    }
+    
+    #i1 {
+      align-self: auto;
+      order: -2;
+    }
+    
+    #i2 {
+      order: 3;
+    }
+    
+    #i3 {
+      align-self: stretch;
+      order: 1;
+    }
+    
+    #i4 {
+      order: -1;
+      align-self: center;
+    }
+    
+    #i5 {
+      order: 5;
+    }
+    
+    #i6 {
+      align-self: flex-end;
+      order: 4;
+    }
+  </style>
+</head>
+<body>
+  <main id="container">
+    <div class="cards" id="i1">1</div>
+    <div class="cards" id="i2">2</div>
+    <div class="cards" id="i3">3</div>
+    <div class="cards" id="i4">4</div>
+    <div class="cards" id="i5">5</div>
+    <div class="cards" id="i6">6</div>
+  </main>
+
+<!--  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul> -->
+</body>
+</html>

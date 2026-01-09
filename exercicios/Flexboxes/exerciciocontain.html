@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio container</title>
+  <style>
+    #container {
+      display: flex;
+      flex-flow: row nowrap;
+      border: 2px solid black;
+      background-color: grey;
+    }
+    
+    div.i {
+      border: 2px solid black;
+      flex-basis: 150px;
+      flex-shrink: 1;
+      background-color: lightskyblue;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    #i1 {
+      flex-grow: 0;
+      flex-shrink: 2;
+    }
+    
+    #i2 {
+      flex-grow: 2;
+      flex-shrink: 0;
+    }
+    
+    #i3 {
+      flex: 1 1 150px;
+    }
+    
+  </style>
+</head>
+<body>
+  <main id="container">
+    <div class="i" id="i1">1</div>
+    <div class="i" id="i2">2</div>
+    <div class="i" id="i3">3</div>
+<!--    <div class="i">4</div>
+    <div class="i">teste de texto</div>
+    <div class="i">6</div>
+-->
+  </main>
+</body>
+</html>

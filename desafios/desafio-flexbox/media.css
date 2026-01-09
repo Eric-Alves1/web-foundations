@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 600px) and (max-width: 998px) {
+  header {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 999px) {
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  
+  nav ul {
+    flex-direction: row;
+  }
+  
+  main {
+    max-width: 998px;
+  }
+}

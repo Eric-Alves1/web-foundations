@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio header</title>
+  <style>
+    #container {
+      border: 3px dashed black;
+      display: grid;
+/*
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: auto auto auto;
+*/
+      grid-template: repeat(3, 80px) / 20% 50% 30%;
+      grid-auto-flow: row;
+      grid-auto-rows: 80px;
+      grid-auto-columns: 120px;
+/* start, center, end, stretch(default) 
+-----------------------------------------
+align-items: start; 
+justify-items: stretch;
+*/
+      place-items: stretch stretch;
+/* start, center, end, stretch(default), space-between, space-around, space-evenly 
+-----------------------------------------
+  align-content: stretch;
+  justify-content: space-between;
+*/
+      place-content: stretch stretch;
+      gap: 10px;
+    }
+    
+    .itens {
+      border: 1px dashed red;
+    }
+  </style>
+</head>
+<body>
+  <header id="container">
+    <div class="itens">A</div>
+    <div class="itens">B</div>
+    <div class="itens">C</div>
+    <div class="itens">D</div>
+    <div class="itens">E</div>
+    <div class="itens">F</div>
+    <div class="itens">G</div>
+    <div class="itens">H</div>
+    <div class="itens">I</div>
+    <div class="itens">J</div>
+  </header>
+</body>
+</html>
