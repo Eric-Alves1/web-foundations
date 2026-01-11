@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>using let or const?</title>
+  </head>
+  <body>
+    <script>
+/*
+consts: used to store a value that isn't going to be changed along the program, consts can't be changed!
+lets: used to store values that can change along the program
+*/    
+
+//the next three consts isn't going to change along the game, so that's why it is const and not a let!
+      const player = "Eric"
+      const opponent = "user123"
+      const game = "AmazingFighter"
+      
+//the next three lets are going to change along the game, that's why they are lets and not const! 
+      let points = 0
+      let hasWon = false
+      
+ //changing the points and the state of "hasWon" like i said before!      
+      points += 100
+      hasWon = false
+
+//seeing who wons the game      
+      if (hasWon) {
+        console.log(`${player} has won and get ${points} points and win the ${game} game!`)
+      } else {
+        console.log(`the winner is ${opponent} with ${points} points! and ${player} lost the game..`)
+      }
+    </script>
+  </body>
+</html>
