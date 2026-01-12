@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Challenge 2</title>
+  </head>
+  <body>
+    <ul>
+      
+    </ul>
+    <script>
+      //CHALLENGE 2: fix the capitalization of the cities in UK, first letter need to be a uppercase and the others letters need to be lowercase
+      const list = document.querySelector("ul");
+      const cities = ["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"];
+      
+      for (const city of cities) {
+        // write your code just below here
+        const lower = city.toLowerCase()
+        const final = lower[0].toUpperCase() + lower.slice(1);
+        const result = final;
+        const listItem = document.createElement("li");
+        listItem.textContent = result;
+        list.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>
