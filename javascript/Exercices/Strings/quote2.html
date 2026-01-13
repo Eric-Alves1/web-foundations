@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Test 3</title>
+  </head>
+  <body>
+    <section></section>
+    <script>
+      const quote = "I dO nOT lIke gREen eGgS anD HAM";
+      
+      let fixedQuote = quote.toLowerCase()
+      fixedQuote = fixedQuote[0].toUpperCase() + fixedQuote.slice(1)
+      fixedQuote = fixedQuote.replace("green eggs and ham", "carrot")
+      const finalQuote = `${fixedQuote}.`
+      
+      const section = document.querySelector("section");
+      const para1 = document.createElement("p");
+      para1.textContent = finalQuote;
+      section.appendChild(para1);
+    </script>
+  </body>
+</html>

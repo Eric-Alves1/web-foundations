@@ -19,7 +19,7 @@ if (browser.endsWith('fox')) {
   console.log('it doesnt end with fox')
 }
 
-//searching for substrings by the position of the first letter and extracting a substring using slice().
+//searching for substrings by the index of the position.
 const tagline = "MDN - resources for developers, by developers";
 const firstOccurrence = tagline.indexOf("developers");
 const secondOccurrence = tagline.indexOf("by", firstOccurrence + 1);
