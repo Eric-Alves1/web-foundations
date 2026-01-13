@@ -1,9 +1,23 @@
-# Web Foundations
+# Web foundations
 
-Este repositório contém meus **exercícios e desafios pessoais** de estudo de **HTML, CSS e JavaScript**.  
-O objetivo é praticar e consolidar os conceitos básicos de desenvolvimento web.
+This repository contains my studies in web development.
 
-## Observações
+The content is organized by technology and focuses on learning fundamentals and practicing problem-solving.
 
-Este repositório tem caráter **educacional** e serve apenas para estudos e prática.  
-Todos os códigos foram criados por mim ou adaptados de tutoriais para fins de aprendizado.
+---
+
+## Structure
+
+### `javascript/`
+JavaScript studies, including fundamentals, guided exercises, and challenges solved from scratch.
+
+---
+
+### `html-css/`
+HTML and CSS studies, focusing on structure, styling, and layout fundamentals.
+
+---
+
+## Purpose
+
+This repository is used to track my learning progress and serve as a reference for review.
