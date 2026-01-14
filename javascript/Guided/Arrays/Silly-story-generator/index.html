@@ -7,22 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <label for="custom-name">Enter custom name:</label>
-    <input id="custom-name" type="text" placeholder="your name"/>
-  </div>
-  <fieldset>
-    <legend>Choose locale:</legend>
-    <label for="us">US</label
-    ><input id="us" type="radio" name="uk-us" value="us" checked />
-    <label for="uk">UK</label
-    ><input id="uk" type="radio" name="uk-us" value="uk" />
-  </fieldset>
-  <div>
-    <button class="generate">Generate random story</button>
+  <div class="form">
+    <label for="custom-name" id="name">Insira um nome personalizado:</label>
+    <input id="custom-name" type="text" placeholder="Ex: seu nome"/>
+    <div class="legend">
+      <p id="countryChoosed">Escolha um país:</p>
+    </div>
+    <fieldset>
+      <label for="Brasil" id="country1">Brasil</label>
+      <input id="br" type="radio" name="br-us" value="brasil" checked/>
+      <label for="eua" id="country2">Estados unidos</label>
+      <input id="eua" type="radio" name="br-us" value="eua" />
+    </fieldset>
+    <button class="generate" id="button">Gerar historia aleatoria</button>
+  <p class="story"></p>
   </div>
   <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
-  <p class="story"></p>
   
   <script src="script.js"></script>
 </body>
