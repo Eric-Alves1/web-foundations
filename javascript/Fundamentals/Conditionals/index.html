@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>choosing the weather</title>
+  </head>
+  <body>
+    <label for="theme">Choose a theme: </label>
+    <select id="theme">
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+    <br>
+    <br>
+    <label for="options">Select the weather weather type today</label>
+    <select id="options">
+      <option value="">--- make a choice ---</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+    
+    <p></p>
+    <script>
+      const select = document.querySelector('select');
+      const html = document.querySelector('html');
+      document.body.style.padding = "10px";
+      
+      function update(bgColor, textColor) {
+        html.style.backgroundColor = bgColor;
+        html.style.color = textColor;
+      }
+      
+      select.addEventListener('change', () => select.value === "black"
+        ? update("black", "white")
+        : update("white", "black")
+      );
+      
+      const weather = document.getElementById('options');
+      const para = document.querySelector('p');
+      
+      weather.addEventListener('change', setWeather);
+      
+//note: the code below can be made with if..else too, but in my opinion is more easy to read using switch()      
+      function setWeather() {
+        const choice = weather.value;
+        
+        switch (choice) {
+          case "sunny": 
+            para.textContent = "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+            break;
+            
+          case "rainy": 
+            para.textContent = "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+            break;
+            
+          case "snowing":
+            para.textContent = "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman."
+            break;
+            
+          case "overcast":
+            para.textContent = "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case."
+            break;
+            
+          default: 
+            para.textContent = ""
+        }
+      };
+    </script>
+  </body>
+</html>
