@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random name from array</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+</head>
+<body>
+  <p></p>
+  <script>
+    const names = [
+      "Chris",
+      "Li Kang",
+      "Anne",
+      "Francesca",
+      "Mustafa",
+      "Tina",
+      "Bert",
+      "Jada",
+    ];
+    const para = document.querySelector("p");
+    
+    function random(start, end) {
+      const index = Math.floor(Math.random() * (end - start) + start);
+      return index;
+    }
+    
+    function chooseName(array) {
+      const choice = array[random(0, 2)];
+      return choice;
+    }
+    
+    para.textContent = chooseName(names);
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random name from array</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+</head>
+<body>
+  <canvas width="240" height="160"></canvas>
+  <script>
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    const x = 50;
+    const y = 50;
+    const width = 100;
+    const height = 50;
+    const color = "blue";
+    
+    function draw(x, y, width, height, color) {
+      ctx.fillStyle = color;
+      ctx.fillRect(x, y, width, height);
+    }
+    
+    draw(x, y, width, height, color);
+  </script>
+</body>
+</html>
