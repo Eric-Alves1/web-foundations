@@ -30,12 +30,12 @@
       return true;
     }
     
-    while (i > 1) {
+    do  {
       if (isPrime(i)) {
         para.textContent += `${i} - `;
       } 
       i -= 1;
-    }
+    } while(i > 1);
     
     section.appendChild(para);
   </script>
