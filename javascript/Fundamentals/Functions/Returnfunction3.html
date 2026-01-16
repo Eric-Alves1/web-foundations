@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 1.2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function squared(num) {
+      return num * num;
+    }
+    
+    function cubed(num) {
+      return num * num * num;
+    }
+    
+    function factorial(num) {
+      if (num < 0) return undefined;
+      if (num === 0) return 1;
+      let x = num - 1;
+      while (x > 1) {
+        num *= x;
+        x--;
+      }
+      return num;
+    }
+    
+    function isInt(num) {
+      if (num % 1 === 0) {
+        return "Integer";
+      } else {
+        return "not integer";
+      }
+    }
+    
+    function EvenOrOdd(num) {
+      if (num < 0) return undefined;
+      if (num % 2 === 0) {
+        return "Even";
+      } else if (num % 2 === 1) {
+        return "Odd"
+      } else {
+        return undefined;
+      }
+    }
+    
+    function Square(num) {
+      if (num < 0) return undefined;
+      return Math.sqrt(num);
+    }
+    
+    input.addEventListener("change", () => {
+      const num = parseFloat(input.value);
+      if (isNaN(num)) {
+        para.textContent = "You need to enter a number!";
+      } else {
+        para.textContent = `${num} squared is ${squared(num)}. `;
+        para.textContent += `${num} cubed is ${cubed(num)}. `;
+        para.textContent += `${num} factorial is ${factorial(num)}. `;
+        para.textContent += `${num} is ${EvenOrOdd(num)}. `;
+        para.textContent += `${num} is ${isInt(num)}. `;
+        para.textContent += `the square root of ${num} is ${Square(num)}`;
+      }
+    });
+  </script>
+</body>
+</html>

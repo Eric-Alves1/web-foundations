@@ -8,16 +8,17 @@
 <body>
 
   <script>
+  //this code was just for tests about the scopes in functions!
     const x = 1;
 
     function a() {
       const y = 2;
-      output(z);
+      output(y);
     }
 
     function b() {
       const z = 3;
-      output(y);
+      output(x);
     }
 
     function output(value) {
