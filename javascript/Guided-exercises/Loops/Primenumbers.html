@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search name's number</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+  </style>
+</head>
+<body>
+  <section></section>
+  <script>
+    let i = 500;
+    const para = document.createElement("p");
+    const section = document.querySelector("section");
+    function isPrime(num) {
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+    
+    while (i > 1) {
+      if (isPrime(i)) {
+        para.textContent += `${i} - `;
+      } 
+      i -= 1;
+    }
+    
+    section.appendChild(para);
+  </script>
+</body>
+</html>

@@ -35,7 +35,7 @@ let password = [
     "abs176d",
     " abwqi",
     " 123456789101122",
-    " 12345678",
+    " 12345678"
   ];
 let approved = password.filter(isLong);
 console.log(`the passwords that you've tried are ${password}.`);

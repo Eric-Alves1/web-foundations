@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>msg if..else</title>
+</head>
+<body>
+  <section></section>
+  <script>
+    let season = "kk";
+    let response;
+    
+    if (season === "summer") {
+      response = "its summer (idk what i should write here";
+    } else if (season === "winter") {
+      response = "its kinda of cold because we are in the winter right?";
+    } else {
+      response = "idk whats the season so i cant say nothing lol";
+    }
+    
+    const section = document.querySelector("section");
+    const para1 = document.createElement("p");
+    para1.textContent = response;
+    section.appendChild(para1);
+  </script>
+</body>
+</html>

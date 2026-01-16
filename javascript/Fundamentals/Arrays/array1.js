@@ -48,3 +48,4 @@ const birds = [
 
 console.log(`the bird owl is at the position ${birds.indexOf("owl")}`);
 console.log(birds[5]);
+console.log(goals)
