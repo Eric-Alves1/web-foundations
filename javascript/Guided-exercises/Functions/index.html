@@ -60,58 +60,63 @@
     <button>Display message box</button>
 
     <script>
-    
-      function displayMessage(msgText, msgType) {
+      function displayMessage(messageText, messageType) {
         const body = document.body;
 
         const panel = document.createElement("div");
         panel.setAttribute("class", "msgBox");
         body.appendChild(panel);
         
-        const msg = document.createElement("p");
-        msg.textContent = msgText;
-        panel.appendChild(msg);
+        const message = document.createElement("p");
+        message.textContent = messageText;
+        panel.appendChild(message);
         
-        const closeBtn = document.createElement("button");
-        closeBtn.textContent = "x";
-        closeBtn.setAttribute("id", "close");
-        panel.appendChild(closeBtn);
+        const closeButton = document.createElement("button");
+        closeButton.textContent = "x";
+        closeButton.setAttribute("id", "close");
+        panel.appendChild(closeButton);
         
-        closeBtn.addEventListener("click", () => body.removeChild(panel));
+        closeButton.addEventListener("click", () => {
+          body.removeChild(panel);
+        });
         
-        if (msgType === "warning" && msgText === "Confirm delete account. This action can not be undone.") {
-          
-          const btnDel = document.createElement("button");
-          btnDel.textContent = "Delete account";
-          btnDel.setAttribute("id", "btndelete");
-          panel.appendChild(btnDel);
-          
-          btnDel.addEventListener("click", () => body.removeChild(panel));
-          btnDel.addEventListener("click", () => displayMessage("Account succesfully deleted.", "chat"));
-          
-          const btnCancel = document.createElement("button");
-          btnCancel.textContent = "Cancel";
-          btnCancel.setAttribute("id", "btncancel");
-          panel.appendChild(btnCancel);
-          
-          btnCancel.addEventListener("click", () => body.removeChild(panel));
-        
-          msg.style.backgroundImage = 'url("icons/warning.png")';
+        if (messageType === "warning") {
+          if(messageText === "Confirm delete account. This action can not be undone.") 
+          {
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete account";
+            deleteButton.setAttribute("id", "btndelete");
+            panel.appendChild(deleteButton);
+              
+            deleteButton.addEventListener("click", () => {
+              body.removeChild(panel)
+              });
+            deleteButton.addEventListener("click", () => {
+              displayMessage("Account succesfully deleted.", "chat");
+              }); 
+              
+            const cancelButton = document.createElement("button");
+            cancelButton.textContent = "Cancel";
+            cancelButton.setAttribute("id", "btncancel");
+            panel.appendChild(cancelButton);
+              
+            cancelButton.addEventListener("click", () => {
+              body.removeChild(panel);
+              });
+          } 
+          message.style.backgroundImage = 'url("icons/warning.png")';
           panel.style.backgroundColor = "#F1AEB5";
-        } else if (msgType === "warning") { 
-          msg.style.backgroundImage = 'url("icons/warning.png")';
-          panel.style.backgroundColor = "#F1AEB5";
-        } else if (msgType === "chat") {
-          msg.style.backgroundImage = 'url("icons/chat.png")';
-          panel.style.backgroundColor = "aqua";
-        } else {
-          msg.style.paddingLeft = "10px";
-        }
+        } else if (messageType === "chat") {
+           message.style.backgroundImage = 'url("icons/chat.png")';
+           panel.style.backgroundColor = "aqua";
+          } else {
+           message.style.paddingLeft = "10px";
+            }
         
       }
       
-      const btn = document.querySelector('button');
-      btn.addEventListener('click', () => displayMessage("Confirm delete account. This action can not be undone.", "warning"));
+      const button = document.querySelector('button');
+      button.addEventListener('click', () => displayMessage("Confirm delete account. This action can not be undone.", "warning"));
     </script>
   </body>
 </html>
