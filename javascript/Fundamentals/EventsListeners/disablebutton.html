@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>disable button</title>
+</head>
+<body>
+  <button>click here</button>
+<script>
+  const button = document.querySelector('button');
+  
+  function handleClick() {
+    button.textContent = "you clicked it one time! but you cant click in it anymore."
+    button.disabled = true;
+    button.removeEventListener('click', handleClick);
+  }
+  
+  button.addEventListener('click', handleClick);
+</script>
+</body>
+</html>
