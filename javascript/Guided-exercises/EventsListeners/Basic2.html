@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clicks</title>
+  <style>
+    button {
+      font-size: 2em;
+      padding: 10px;
+    }
+    
+    #output {
+      font-size: 2em;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="add">+</button>
+  <button id="subtract">-</button>
+  <span id="output"></span>
+<script>
+  const buttonAdd = document.querySelector('#add');
+  const buttonSubtract = document.querySelector('#subtract');
+  const output = document.querySelector('#output');
+  
+  let num = 0;
+  output.textContent = num;
+  
+  function addValue() {
+    output.textContent = num += 1;
+  }
+  
+  function subtractValue() {
+    output.textContent = num -= 1;
+  }
+  
+  buttonAdd.addEventListener('click', addValue);
+  buttonSubtract.addEventListener('click', subtractValue);
+</script>
+</body>
+</html>

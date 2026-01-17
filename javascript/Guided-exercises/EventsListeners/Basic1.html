@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clicks</title>
+</head>
+<body>
+  <button>change paragraph</button>
+  <p>original text</p>
+  <script>
+    const button = document.querySelector('button');
+    const para = document.querySelector('p');
+    
+    function changeParagraph() {
+      if (para.textContent === "original text") {
+        para.textContent = "a different paragraph";
+      } else {
+        para.textContent = "original text";
+      }
+    };
+    
+    button.addEventListener('click', changeParagraph);
+  </script>
+</body>
+</html>
