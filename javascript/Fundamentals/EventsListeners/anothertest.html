@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>idk</title>
+  <style>
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 300px;
+      width: 300px;
+      border: 2px solid black;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div>Normal text</div>  
+<script>
+  const div = document.querySelector('div');
+  
+  function enter() {
+    div.style.backgroundColor = "#008f6a";
+    div.textContent = "mouse entered";
+  }
+  
+  function leave() {
+    div.style.backgroundColor = "#9a9cff";
+    div.textContent = "mouse left";
+  }
+  
+  div.addEventListener('mouseenter', enter);
+  div.addEventListener('mouseleave', leave)
+</script>
+</body>
+</html>

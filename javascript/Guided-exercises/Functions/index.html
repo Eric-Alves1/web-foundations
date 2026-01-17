@@ -78,6 +78,7 @@
         
         closeButton.addEventListener("click", () => {
           body.removeChild(panel);
+          reactivateButton();
         });
         
         if (messageType === "warning") {
@@ -102,6 +103,7 @@
               
             cancelButton.addEventListener("click", () => {
               body.removeChild(panel);
+              reactivateButton();
               });
           } 
           message.style.backgroundImage = 'url("icons/warning.png")';
@@ -112,11 +114,23 @@
           } else {
            message.style.paddingLeft = "10px";
             }
-        
       }
       
       const button = document.querySelector('button');
-      button.addEventListener('click', () => displayMessage("Confirm delete account. This action can not be undone.", "warning"));
+      
+      function handleButtonClick() {
+        displayMessage("Confirm delete account. This action can not be undone.", "warning");
+        
+        button.disabled = true;
+        button.removeEventListener('click', handleButtonClick);
+      }
+      
+      function reactivateButton() {
+        button.disabled = false;
+        button.addEventListener('click', handleButtonClick);
+      }
+      
+      button.addEventListener('click', handleButtonClick);
     </script>
   </body>
 </html>
